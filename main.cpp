@@ -1,20 +1,26 @@
 #include <iostream>
-#include "link_list.h"
+#include <vector>
+#include <set>
+
+using namespace std;
+
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if (nums.size()<2)
+            return nums.size();
+        int j=0;
+        for (int i = 1; i < nums.size(); ++i)
+        {
+            if (nums[j] != nums[i])
+                nums[++j] = nums[i];
+        }
+        return ++j;
+    }
+};
 
 int main()
 {
-    LinkList link_list;
-    vector<int> list_elements{1, 2, 3, 4, 5};
-    ListNode* lists = link_list.CreatListEndInsert(list_elements);
-    link_list.PrintListNode(lists);
-    ListNode* reverse_lists = link_list.ReverseListRecursion(lists);
-    link_list.PrintListNode(reverse_lists);
+
     return 0;
 }
-
-
-
-
-
-
-
