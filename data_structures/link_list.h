@@ -161,7 +161,7 @@ public:
     {
         if (head == nullptr || head->next == nullptr)
             return head;
-        ListNode *new_head = ReverseListIteration(head->next);
+        ListNode *new_head = ReverseListRecursion(head->next);
 
         head->next->next = head;
         head->next = nullptr;
