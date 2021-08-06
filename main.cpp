@@ -1,10 +1,14 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
 #include <set>
+#include <map>
+#include <unordered_map>
 #include <queue>
 #include <stack>
 #include <climits>
+#include <list>
+#include <string>
+#include <algorithm>
 #include "data_structures/tree.h"
 #include "data_structures/link_list.h"
 
@@ -14,7 +18,7 @@ using namespace std;
 class Solution
 {
 public:
-    int myAtoi(string s)
+    int removeElement(vector<int> &nums, int val)
     {
 
     }
@@ -22,11 +26,12 @@ public:
 
 int main()
 {
-    vector<vector<int>> matrix = {{1,  4,  7,  11, 15},
-                                  {2,  5,  8,  12, 19},
-                                  {3,  6,  9,  16, 22},
-                                  {10, 13, 14, 17, 24},
-                                  {18, 21, 23, 26, 30}};
-    Solution mysolution;
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for (int i = 0; i < n; ++i)
+    {
+        scanf("%d", &a[i]);
+    }
     return 0;
 }

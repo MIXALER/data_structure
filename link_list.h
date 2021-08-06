@@ -20,12 +20,6 @@ struct ListNode
     int val;
     ListNode *next;
 
-    ListNode() : val(0), next(nullptr)
-    {}
-
-    ListNode(int val) : val(val), next(nullptr)
-    {}
-
     ListNode(int val, ListNode *next) : val(val), next(next)
     {}
 };
@@ -167,7 +161,7 @@ public:
     {
         if (head == nullptr || head->next == nullptr)
             return head;
-        ListNode *new_head = ReverseListRecursion(head->next);
+        ListNode *new_head = ReverseListIteration(head->next);
 
         head->next->next = head;
         head->next = nullptr;
