@@ -1,9 +1,9 @@
-// ¼ÆÊıÅÅĞò£¨»ù´¡°æ£©£¬×÷Õß£ºCÓïÑÔ¼¼ÊõÍø£¨www.freecplus.net£©ÂëÅ©ÓĞµÀ¡£
+// è®¡æ•°æ’åºï¼ˆåŸºç¡€ç‰ˆï¼‰ï¼Œä½œè€…ï¼šCè¯­è¨€æŠ€æœ¯ç½‘ï¼ˆwww.freecplus.netï¼‰ç å†œæœ‰é“ã€‚
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// »ñÈ¡´ıÅÅĞòÊı×éµÄ×î´óÔªËØµÄÖµ¡£
+// è·å–å¾…æ’åºæ•°ç»„çš„æœ€å¤§å…ƒç´ çš„å€¼ã€‚
 int arrmax(int *arr,unsigned int len)
 {
   int ii=0;
@@ -14,22 +14,22 @@ int arrmax(int *arr,unsigned int len)
   return imax;
 }
 
-// ¼ÆÊıÅÅĞòÖ÷º¯Êı£¬arr-´ıÅÅĞòÊı×éµÄµØÖ·£¬len-Êı×éµÄ³¤¶È¡£
+// è®¡æ•°æ’åºä¸»å‡½æ•°ï¼Œarr-å¾…æ’åºæ•°ç»„çš„åœ°å€ï¼Œlen-æ•°ç»„çš„é•¿åº¦ã€‚
 void countsort(int *arr,unsigned int len) 
 {
   if (len<2) return;
 
-  int imax=arrmax(arr,len);  // »ñÈ¡´ıÅÅĞòÊı×éµÄ×î´óÔªËØµÄÖµ¡£
-  int arrtmp[imax+1];        // ÁÙÊ±Êı×éµÄ´óĞ¡Îªimax+1¡£
+  int imax=arrmax(arr,len);  // è·å–å¾…æ’åºæ•°ç»„çš„æœ€å¤§å…ƒç´ çš„å€¼ã€‚
+  int arrtmp[imax+1];        // ä¸´æ—¶æ•°ç»„çš„å¤§å°ä¸ºimax+1ã€‚
 
-  memset(arrtmp,0,sizeof(arrtmp));  // ³õÊ¼»¯ÁÙÊ±Êı×é¡£
+  memset(arrtmp,0,sizeof(arrtmp));  // åˆå§‹åŒ–ä¸´æ—¶æ•°ç»„ã€‚
 
   int ii,jj,kk;
   
-  // ÁÙÊ±Êı×é¼ÆÊı¡£
+  // ä¸´æ—¶æ•°ç»„è®¡æ•°ã€‚
   for (ii=0;ii<len;ii++) arrtmp[arr[ii]]++;
 
-  // °ÑÁÙÊ±Êı×é¼ÆÊıµÄÄÚÈİÌî³äµ½arrÖĞ¡£
+  // æŠŠä¸´æ—¶æ•°ç»„è®¡æ•°çš„å†…å®¹å¡«å……åˆ°arrä¸­ã€‚
   ii=0;
   for (jj=0;jj<imax+1;jj++)
   {
@@ -47,10 +47,10 @@ int main()
 
   countsort(arr,len);
 
-  // ÏÔÊ¾ÅÅĞò½á¹û¡£
+  // æ˜¾ç¤ºæ’åºç»“æœã€‚
   int yy; for (yy=0;yy<len;yy++) printf("%2d ",arr[yy]); printf("\n");
 
-  // system("pause");  // widnowsÏÂµÄCÆôÓÃ±¾ĞĞ´úÂë¡£
+  // system("pause");  // widnowsä¸‹çš„Cå¯ç”¨æœ¬è¡Œä»£ç ã€‚
 
   return 0;
 }
